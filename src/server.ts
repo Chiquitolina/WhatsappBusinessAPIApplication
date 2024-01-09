@@ -1,6 +1,7 @@
 import express from "express";
 import { createExpressMiddleware } from "@trpc/server/adapters/express";
-import { router } from "./appRouter";
+import { router } from "./trcp/appRouter";
+import { sendWhatsappMessage } from "./services/whatsAppService";
 
 const app = express();
 
@@ -11,6 +12,7 @@ const appRouter = router({
 });
 
 app.get("/", (req, res) => {
+  sendWhatsappMessage("+54 341 312-8576", "request");
   res.send("Hola mundo!");
 });
 

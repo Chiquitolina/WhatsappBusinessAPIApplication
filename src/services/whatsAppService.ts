@@ -16,7 +16,7 @@ export async function sendWhatsappMessage(phone: string, templateName: string) {
         template: {
           name: templateName,
           language: {
-            code: "en_US",
+            code: "es",
           },
         },
       },

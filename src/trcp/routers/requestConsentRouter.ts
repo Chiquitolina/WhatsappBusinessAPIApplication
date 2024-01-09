@@ -1,5 +1,5 @@
 import { sendWhatsappMessage } from "../../services/whatsAppService";
-import { router, publicProcedure } from "../../appRouter";
+import { router, publicProcedure } from "../appRouter";
 import { z } from "zod";
 
 export const exampleRouter = router({
