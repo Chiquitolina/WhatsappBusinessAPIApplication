@@ -1,14 +1,7 @@
-import { initTRPC } from "@trpc/server";
+import { router } from "./trcp";
 
-/**
- * Initialization of tRPC backend
- * Should be done only once per backend!
- */
-const t = initTRPC.create();
+const appRouter = router({
+  consent: consentRouter,
+});
 
-/**
- * Export reusable router and procedure helpers
- * that can be used throughout the router
- */
-export const router = t.router;
-export const publicProcedure = t.procedure;
+export default appRouter;

@@ -1,8 +1,8 @@
 import { sendWhatsappMessage } from "../../services/whatsAppService";
-import { router, publicProcedure } from "../appRouter";
+import { router, publicProcedure } from "../trcp";
 import { z } from "zod";
 
-export const exampleRouter = router({
+export const consentRouter = router({
   requestConsent: publicProcedure
     .input(
       z.object({
